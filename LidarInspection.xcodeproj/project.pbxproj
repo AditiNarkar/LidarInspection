@@ -1,0 +1,557 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXContainerItemProxy section */
+		EB911EBB3036AFB700E97A39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB911EA23036AFB500E97A39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB911EA93036AFB500E97A39;
+			remoteInfo = LidarInspection;
+		};
+		EB911EC53036AFB700E97A39 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EB911EA23036AFB500E97A39 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EB911EA93036AFB500E97A39;
+			remoteInfo = LidarInspection;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		EB911EAA3036AFB500E97A39 /* LidarInspection.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LidarInspection.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB911EBA3036AFB700E97A39 /* LidarInspectionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LidarInspectionTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB911EC43036AFB700E97A39 /* LidarInspectionUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LidarInspectionUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		EB911EAC3036AFB500E97A39 /* LidarInspection */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LidarInspection;
+			sourceTree = "<group>";
+		};
+		EB911EBD3036AFB700E97A39 /* LidarInspectionTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LidarInspectionTests;
+			sourceTree = "<group>";
+		};
+		EB911EC73036AFB700E97A39 /* LidarInspectionUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = LidarInspectionUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB911EA73036AFB500E97A39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB911EB73036AFB700E97A39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB911EC13036AFB700E97A39 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB911EA13036AFB500E97A39 = {
+			isa = PBXGroup;
+			children = (
+				EB911EAC3036AFB500E97A39 /* LidarInspection */,
+				EB911EBD3036AFB700E97A39 /* LidarInspectionTests */,
+				EB911EC73036AFB700E97A39 /* LidarInspectionUITests */,
+				EB911EAB3036AFB500E97A39 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB911EAB3036AFB500E97A39 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB911EAA3036AFB500E97A39 /* LidarInspection.app */,
+				EB911EBA3036AFB700E97A39 /* LidarInspectionTests.xctest */,
+				EB911EC43036AFB700E97A39 /* LidarInspectionUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB911EA93036AFB500E97A39 /* LidarInspection */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB911ECE3036AFB700E97A39 /* Build configuration list for PBXNativeTarget "LidarInspection" */;
+			buildPhases = (
+				EB911EA63036AFB500E97A39 /* Sources */,
+				EB911EA73036AFB500E97A39 /* Frameworks */,
+				EB911EA83036AFB500E97A39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				EB911EAC3036AFB500E97A39 /* LidarInspection */,
+			);
+			name = LidarInspection;
+			packageProductDependencies = (
+			);
+			productName = LidarInspection;
+			productReference = EB911EAA3036AFB500E97A39 /* LidarInspection.app */;
+			productType = "com.apple.product-type.application";
+		};
+		EB911EB93036AFB700E97A39 /* LidarInspectionTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB911ED13036AFB700E97A39 /* Build configuration list for PBXNativeTarget "LidarInspectionTests" */;
+			buildPhases = (
+				EB911EB63036AFB700E97A39 /* Sources */,
+				EB911EB73036AFB700E97A39 /* Frameworks */,
+				EB911EB83036AFB700E97A39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB911EBC3036AFB700E97A39 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EB911EBD3036AFB700E97A39 /* LidarInspectionTests */,
+			);
+			name = LidarInspectionTests;
+			packageProductDependencies = (
+			);
+			productName = LidarInspectionTests;
+			productReference = EB911EBA3036AFB700E97A39 /* LidarInspectionTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		EB911EC33036AFB700E97A39 /* LidarInspectionUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB911ED43036AFB700E97A39 /* Build configuration list for PBXNativeTarget "LidarInspectionUITests" */;
+			buildPhases = (
+				EB911EC03036AFB700E97A39 /* Sources */,
+				EB911EC13036AFB700E97A39 /* Frameworks */,
+				EB911EC23036AFB700E97A39 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				EB911EC63036AFB700E97A39 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				EB911EC73036AFB700E97A39 /* LidarInspectionUITests */,
+			);
+			name = LidarInspectionUITests;
+			packageProductDependencies = (
+			);
+			productName = LidarInspectionUITests;
+			productReference = EB911EC43036AFB700E97A39 /* LidarInspectionUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB911EA23036AFB500E97A39 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1620;
+				LastUpgradeCheck = 1620;
+				TargetAttributes = {
+					EB911EA93036AFB500E97A39 = {
+						CreatedOnToolsVersion = 16.2;
+					};
+					EB911EB93036AFB700E97A39 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = EB911EA93036AFB500E97A39;
+					};
+					EB911EC33036AFB700E97A39 = {
+						CreatedOnToolsVersion = 16.2;
+						TestTargetID = EB911EA93036AFB500E97A39;
+					};
+				};
+			};
+			buildConfigurationList = EB911EA53036AFB500E97A39 /* Build configuration list for PBXProject "LidarInspection" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = EB911EA13036AFB500E97A39;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = EB911EAB3036AFB500E97A39 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB911EA93036AFB500E97A39 /* LidarInspection */,
+				EB911EB93036AFB700E97A39 /* LidarInspectionTests */,
+				EB911EC33036AFB700E97A39 /* LidarInspectionUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB911EA83036AFB500E97A39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB911EB83036AFB700E97A39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB911EC23036AFB700E97A39 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB911EA63036AFB500E97A39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB911EB63036AFB700E97A39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EB911EC03036AFB700E97A39 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		EB911EBC3036AFB700E97A39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB911EA93036AFB500E97A39 /* LidarInspection */;
+			targetProxy = EB911EBB3036AFB700E97A39 /* PBXContainerItemProxy */;
+		};
+		EB911EC63036AFB700E97A39 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EB911EA93036AFB500E97A39 /* LidarInspection */;
+			targetProxy = EB911EC53036AFB700E97A39 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		EB911ECC3036AFB700E97A39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		EB911ECD3036AFB700E97A39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		EB911ECF3036AFB700E97A39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LidarInspection/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = swinburne.LidarInspection;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		EB911ED03036AFB700E97A39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"LidarInspection/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = swinburne.LidarInspection;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		EB911ED23036AFB700E97A39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = swinburne.LidarInspectionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LidarInspection.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LidarInspection";
+			};
+			name = Debug;
+		};
+		EB911ED33036AFB700E97A39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.2;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = swinburne.LidarInspectionTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LidarInspection.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/LidarInspection";
+			};
+			name = Release;
+		};
+		EB911ED53036AFB700E97A39 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = swinburne.LidarInspectionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LidarInspection;
+			};
+			name = Debug;
+		};
+		EB911ED63036AFB700E97A39 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = swinburne.LidarInspectionUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LidarInspection;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB911EA53036AFB500E97A39 /* Build configuration list for PBXProject "LidarInspection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB911ECC3036AFB700E97A39 /* Debug */,
+				EB911ECD3036AFB700E97A39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB911ECE3036AFB700E97A39 /* Build configuration list for PBXNativeTarget "LidarInspection" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB911ECF3036AFB700E97A39 /* Debug */,
+				EB911ED03036AFB700E97A39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB911ED13036AFB700E97A39 /* Build configuration list for PBXNativeTarget "LidarInspectionTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB911ED23036AFB700E97A39 /* Debug */,
+				EB911ED33036AFB700E97A39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB911ED43036AFB700E97A39 /* Build configuration list for PBXNativeTarget "LidarInspectionUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB911ED53036AFB700E97A39 /* Debug */,
+				EB911ED63036AFB700E97A39 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB911EA23036AFB500E97A39 /* Project object */;
+}
