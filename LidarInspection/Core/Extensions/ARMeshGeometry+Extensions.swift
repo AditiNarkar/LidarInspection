@@ -19,6 +19,6 @@ extension ARMeshGeometry {
         let pointer = vertices.buffer.contents()
             .advanced(by: vertices.offset + index * vertices.stride)
 
-        return pointer.load(as: SIMD3<Float>.self)
+        return pointer.loadUnaligned(as: SIMD3<Float>.self)
     }
 }

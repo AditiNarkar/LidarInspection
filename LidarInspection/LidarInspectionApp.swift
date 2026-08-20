@@ -34,6 +34,7 @@ struct LidarInspectionApp: App {
                                 expectedDimensions,
                             measured:
                                 measuredDimensions,
+                            scanner: scanner,
                             onNewInspection: {
                                 self.expectedDimensions = nil
                                 self.measuredDimensions = nil

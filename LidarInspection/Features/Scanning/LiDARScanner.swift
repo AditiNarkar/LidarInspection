@@ -37,17 +37,7 @@ final class LiDARScanner: NSObject {
             throw InspectionError.sceneReconstructionUnavailable
         }
 
-        let configuration =
-            ARWorldTrackingConfiguration()
-
-        configuration.sceneReconstruction = .mesh
-
-        configuration.planeDetection = [
-            .horizontal,
-            .vertical
-        ]
-
-        configuration.environmentTexturing = .automatic
+        let configuration = makeConfiguration()
 
         session.run(
             configuration,
@@ -57,6 +47,18 @@ final class LiDARScanner: NSObject {
             ]
         )
 
+        isRunning = true
+    }
+
+    func resume() throws {
+
+        guard ARWorldTrackingConfiguration.isSupported,
+              ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh)
+        else {
+            throw InspectionError.lidarUnavailable
+        }
+
+        session.run(makeConfiguration())
         isRunning = true
     }
 
@@ -77,18 +79,8 @@ final class LiDARScanner: NSObject {
 
         session.pause()
 
-        let configuration =
-            ARWorldTrackingConfiguration()
-
-        configuration.sceneReconstruction = .mesh
-
-        configuration.planeDetection = [
-            .horizontal,
-            .vertical
-        ]
-
         session.run(
-            configuration,
+            makeConfiguration(),
             options: [
                 .resetTracking,
                 .removeExistingAnchors
@@ -99,6 +91,15 @@ final class LiDARScanner: NSObject {
     func meshAnchorsSnapshot() -> [ARMeshAnchor] {
 
         Array(meshAnchors.values)
+    }
+
+    private func makeConfiguration() -> ARWorldTrackingConfiguration {
+
+        let configuration = ARWorldTrackingConfiguration()
+        configuration.sceneReconstruction = .mesh
+        configuration.planeDetection = [.horizontal, .vertical]
+        configuration.environmentTexturing = .automatic
+        return configuration
     }
 }
 

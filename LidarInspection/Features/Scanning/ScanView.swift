@@ -48,7 +48,8 @@ struct ScanView: View {
 
             ARViewContainer(
                 scanner:
-                    viewModel.scanner
+                    viewModel.scanner,
+                showsMesh: true
             ) { point in
 
                 viewModel.selectObject(
@@ -122,6 +123,9 @@ struct ScanView: View {
             .multilineTextAlignment(
                 .center
             )
+
+            Label("Live mesh overlay is enabled", systemImage: "cube.transparent")
+                .font(.caption)
         }
         .padding()
         .background(

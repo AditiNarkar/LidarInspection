@@ -4,10 +4,13 @@ struct ResultsView: View {
 
     @StateObject private var viewModel: ResultsViewModel
     let onNewInspection: () -> Void
+    let scanner: LiDARScanner
+    @State private var isShowingMeshReview = false
 
     init(
         expected: ObjectDimensions,
         measured: MeasuredDimensions,
+        scanner: LiDARScanner,
         onNewInspection: @escaping () -> Void
     ) {
         _viewModel = StateObject(
@@ -16,6 +19,7 @@ struct ResultsView: View {
                 measured: measured
             )
         )
+        self.scanner = scanner
         self.onNewInspection = onNewInspection
     }
 
@@ -27,6 +31,11 @@ struct ResultsView: View {
 
                 dimensionsSection
 
+                Button("Review 3D Mesh") {
+                    isShowingMeshReview = true
+                }
+                .buttonStyle(.bordered)
+
                 Button("Start New Inspection", action: onNewInspection)
                     .buttonStyle(.borderedProminent)
             }
@@ -34,6 +43,9 @@ struct ResultsView: View {
         }
         .navigationTitle("Inspection Results")
         .navigationBarTitleDisplayMode(.inline)
+        .sheet(isPresented: $isShowingMeshReview) {
+            MeshReviewView(scanner: scanner)
+        }
     }
 
     // MARK: - Status

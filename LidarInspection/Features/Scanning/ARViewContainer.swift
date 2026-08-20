@@ -13,6 +13,8 @@ struct ARViewContainer: UIViewRepresentable {
 
     let scanner: LiDARScanner
 
+    let showsMesh: Bool
+
     let onTap: (SIMD3<Float>) -> Void
 
     func makeUIView(
@@ -30,6 +32,10 @@ struct ARViewContainer: UIViewRepresentable {
             .sceneUnderstanding
             .options
             .insert(.occlusion)
+
+        if showsMesh {
+            arView.debugOptions.insert(.showSceneUnderstanding)
+        }
 
         let tapGesture =
             UITapGestureRecognizer(
