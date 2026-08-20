@@ -3,10 +3,12 @@ import SwiftUI
 struct ResultsView: View {
 
     @StateObject private var viewModel: ResultsViewModel
+    let onNewInspection: () -> Void
 
     init(
         expected: ObjectDimensions,
-        measured: MeasuredDimensions
+        measured: MeasuredDimensions,
+        onNewInspection: @escaping () -> Void
     ) {
         _viewModel = StateObject(
             wrappedValue: ResultsViewModel(
@@ -14,6 +16,7 @@ struct ResultsView: View {
                 measured: measured
             )
         )
+        self.onNewInspection = onNewInspection
     }
 
     var body: some View {
@@ -23,6 +26,9 @@ struct ResultsView: View {
                 statusSection
 
                 dimensionsSection
+
+                Button("Start New Inspection", action: onNewInspection)
+                    .buttonStyle(.borderedProminent)
             }
             .padding()
         }
@@ -61,21 +67,27 @@ struct ResultsView: View {
                 name: "Width",
                 expected: viewModel.result.expected.width,
                 measured: viewModel.result.measured.width,
-                deviation: viewModel.result.widthDeviation
+                deviation: viewModel.result.widthDeviation,
+                tolerance: viewModel.result.tolerance.width,
+                isWithinTolerance: viewModel.result.widthWithinTolerance
             )
 
             dimensionRow(
                 name: "Height",
                 expected: viewModel.result.expected.height,
                 measured: viewModel.result.measured.height,
-                deviation: viewModel.result.heightDeviation
+                deviation: viewModel.result.heightDeviation,
+                tolerance: viewModel.result.tolerance.height,
+                isWithinTolerance: viewModel.result.heightWithinTolerance
             )
 
             dimensionRow(
                 name: "Breadth",
                 expected: viewModel.result.expected.breadth,
                 measured: viewModel.result.measured.breadth,
-                deviation: viewModel.result.breadthDeviation
+                deviation: viewModel.result.breadthDeviation,
+                tolerance: viewModel.result.tolerance.breadth,
+                isWithinTolerance: viewModel.result.breadthWithinTolerance
             )
         }
     }
@@ -86,19 +98,23 @@ struct ResultsView: View {
         name: String,
         expected: Float,
         measured: Float,
-        deviation: Float
+        deviation: Float,
+        tolerance: Float,
+        isWithinTolerance: Bool
     ) -> some View {
 
         HStack {
-            Text(name)
+            Label(name, systemImage: isWithinTolerance ? "checkmark.circle.fill" : "xmark.circle.fill")
                 .fontWeight(.semibold)
+                .foregroundStyle(isWithinTolerance ? .green : .red)
 
             Spacer()
 
             VStack(alignment: .trailing, spacing: 4) {
-                Text("Expected: \(expected, specifier: "%.2f")")
-                Text("Measured: \(measured, specifier: "%.2f")")
-                Text("Deviation: \(deviation, specifier: "%+.2f")")
+                Text("Expected: \(expected * 1_000, specifier: "%.1f") mm")
+                Text("Measured: \(measured * 1_000, specifier: "%.1f") mm")
+                Text("Deviation: \(deviation * 1_000, specifier: "%+.1f") mm")
+                Text("Tolerance: ±\(tolerance * 1_000, specifier: "%.1f") mm")
             }
             .font(.caption)
         }

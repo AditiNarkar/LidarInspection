@@ -24,8 +24,7 @@ final class ScanViewModel:
     @Published var errorMessage:
         String?
 
-    private let scanner:
-        LiDARScanner
+    let scanner: LiDARScanner
 
     private let measurementService:
         DimensionMeasuring
@@ -70,6 +69,7 @@ final class ScanViewModel:
     ) {
 
         selectedPoint = point
+        measuredDimensions = nil
     }
 
     func measureObject() {
@@ -106,5 +106,7 @@ final class ScanViewModel:
         selectedPoint = nil
 
         measuredDimensions = nil
+
+        errorMessage = nil
     }
 }

@@ -10,9 +10,7 @@ struct ConfigurationView: View {
 
     var body: some View {
 
-        NavigationStack {
-
-            Form {
+        Form {
 
                 Section(
                     header: Text("Expected Dimensions")
@@ -59,29 +57,31 @@ struct ConfigurationView: View {
                     onContinue(dimensions)
                 }
             }
-            .navigationTitle(
-                "Object Configuration"
-            )
-            .alert(
-                "Invalid Input",
-                isPresented:
-                    .constant(
-                        viewModel.errorMessage != nil
-                    )
-            ) {
-
-                Button("OK") {
-
-                    viewModel.errorMessage =
-                        nil
+        .navigationTitle(
+            "Object Configuration"
+        )
+        .alert(
+            "Invalid Input",
+            isPresented: Binding(
+                get: { viewModel.errorMessage != nil },
+                set: { isPresented in
+                    if !isPresented {
+                        viewModel.errorMessage = nil
+                    }
                 }
+            )
+        ) {
 
-            } message: {
+            Button("OK") {
 
-                Text(
-                    viewModel.errorMessage ?? ""
-                )
+                viewModel.errorMessage = nil
             }
+
+        } message: {
+
+            Text(
+                viewModel.errorMessage ?? ""
+            )
         }
     }
 

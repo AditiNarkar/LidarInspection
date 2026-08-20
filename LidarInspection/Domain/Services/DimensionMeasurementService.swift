@@ -63,8 +63,27 @@ final class DimensionMeasurementService: DimensionMeasuring {
             throw InspectionError.insufficientMeshData
         }
 
+        let supportSurface = supportSurfaceHeight(
+            in: points,
+            below: center
+        )
+
+        let objectPoints: [SIMD3<Float>]
+        if let supportSurface {
+            objectPoints = points.filter {
+                $0.y > supportSurface + AppConstants.Measurement.supportSurfaceClearance
+            }
+        } else {
+            objectPoints = points
+        }
+
+        guard objectPoints.count >= AppConstants.Measurement.minimumPointCount else {
+            throw InspectionError.insufficientMeshData
+        }
+
         return boundingBox(
-            from: points
+            from: objectPoints,
+            supportSurface: supportSurface
         )
     }
 
@@ -91,8 +110,48 @@ final class DimensionMeasurementService: DimensionMeasuring {
         )
     }
 
+    private func supportSurfaceHeight(
+        in points: [SIMD3<Float>],
+        below selectedPoint: SIMD3<Float>
+    ) -> Float? {
+
+        let binSize = AppConstants.Measurement.supportSurfaceBinSize
+        let candidatePoints = points.filter {
+            $0.y <= selectedPoint.y + binSize * 2
+        }
+
+        var bins: [Int: [SIMD3<Float>]] = [:]
+        for point in candidatePoints {
+            let bin = Int((point.y / binSize).rounded())
+            bins[bin, default: []].append(point)
+        }
+
+        let requiredSpan = AppConstants.Measurement.minimumSupportSurfaceSpan
+        let surfaceBins = bins.values.filter { points in
+            guard points.count >= AppConstants.Measurement.minimumPointCount else {
+                return false
+            }
+
+            let xValues = points.map(\.x)
+            let zValues = points.map(\.z)
+            guard let minX = xValues.min(), let maxX = xValues.max(),
+                  let minZ = zValues.min(), let maxZ = zValues.max()
+            else {
+                return false
+            }
+
+            return maxX - minX >= requiredSpan && maxZ - minZ >= requiredSpan
+        }
+
+        // Prefer the largest horizontal footprint: the support surface contains
+        // substantially more local mesh points than an individual part face.
+        return surfaceBins.max(by: { $0.count < $1.count })
+            .map { $0.reduce(0) { $0 + $1.y } / Float($0.count) }
+    }
+
     private func boundingBox(
-        from points: [SIMD3<Float>]
+        from points: [SIMD3<Float>],
+        supportSurface: Float?
     ) -> MeasuredDimensions {
 
         var minimum = points[0]
@@ -111,13 +170,13 @@ final class DimensionMeasurementService: DimensionMeasuring {
             )
         }
 
-        let size =
-            maximum - minimum
+        let size = maximum - minimum
+        let height = supportSurface.map { maximum.y - $0 } ?? abs(size.y)
 
         return MeasuredDimensions(
             width: abs(size.x),
             breadth: abs(size.z),
-            height: abs(size.y)
+            height: height
         )
     }
 }

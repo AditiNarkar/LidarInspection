@@ -48,7 +48,7 @@ struct ScanView: View {
 
             ARViewContainer(
                 scanner:
-                    viewModelScanner
+                    viewModel.scanner
             ) { point in
 
                 viewModel.selectObject(
@@ -105,18 +105,6 @@ struct ScanView: View {
         }
     }
 
-    private var viewModelScanner:
-        LiDARScanner {
-
-        Mirror(reflecting: viewModel)
-            .children
-            .first {
-                $0.label == "scanner"
-            }?
-            .value as? LiDARScanner
-            ?? LiDARScanner()
-    }
-
     private var instructionView:
         some View {
 
@@ -128,7 +116,7 @@ struct ScanView: View {
             .font(.headline)
 
             Text(
-                "Move slowly around the object to allow LiDAR to capture its geometry."
+                "Place the part on a flat bench, scan around it slowly, then tap the part. The bench surface is excluded from the measurement."
             )
             .font(.subheadline)
             .multilineTextAlignment(
@@ -170,6 +158,7 @@ struct ScanView: View {
                     )
                 }
             }
+            .disabled(viewModel.selectedPoint == nil)
             .buttonStyle(
                 .borderedProminent
             )

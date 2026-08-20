@@ -19,8 +19,18 @@ enum AppConstants {
         // center to consider a mesh point.
         static let objectRadius: Float = 0.75
 
-        // Depth tolerance used during object isolation.
-        static let depthTolerance: Float = 0.15
+        // Vertical bin size used to identify the horizontal surface supporting
+        // the part (for example, a bench or floor).
+        static let supportSurfaceBinSize: Float = 0.008
+
+        // Mesh points this close to the support surface are treated as part of
+        // the bench/floor and excluded from the object's footprint.
+        static let supportSurfaceClearance: Float = 0.012
+
+        // A support surface must span at least this distance in both horizontal
+        // axes before it is removed. This avoids mistaking a small object face
+        // for the bench.
+        static let minimumSupportSurfaceSpan: Float = 0.10
     }
 
     enum UI {

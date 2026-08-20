@@ -14,14 +14,11 @@ extension ARMeshGeometry {
         at index: Int
     ) -> SIMD3<Float> {
 
-        let pointer =
-            vertices.buffer.contents()
+        precondition(index >= 0 && index < vertices.count)
 
-        let typedPointer =
-            pointer.assumingMemoryBound(
-                to: SIMD3<Float>.self
-            )
+        let pointer = vertices.buffer.contents()
+            .advanced(by: vertices.offset + index * vertices.stride)
 
-        return typedPointer[index]
+        return pointer.load(as: SIMD3<Float>.self)
     }
 }
