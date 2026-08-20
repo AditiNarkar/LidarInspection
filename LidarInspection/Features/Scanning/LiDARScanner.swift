@@ -50,18 +50,6 @@ final class LiDARScanner: NSObject {
         isRunning = true
     }
 
-    func resume() throws {
-
-        guard ARWorldTrackingConfiguration.isSupported,
-              ARWorldTrackingConfiguration.supportsSceneReconstruction(.mesh)
-        else {
-            throw InspectionError.lidarUnavailable
-        }
-
-        session.run(makeConfiguration())
-        isRunning = true
-    }
-
     func stop() {
 
         session.pause()
